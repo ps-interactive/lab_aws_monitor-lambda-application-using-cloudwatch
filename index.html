@@ -249,15 +249,15 @@ function getUrl(){
 
         });
 
-        document.getElementById('get-by-id').addEventListener("click", function () {
-            var id = document.getElementById('getbyid-id').value
-            if (!id) return alert('Plese specify an id');
-            axios.get(`${getUrl()}/${id}`, config).then(result => {
-                setOutput(result.data)
-            }).catch(err => {
-                setOutput(err)
-            })
-        });
+        // document.getElementById('get-by-id').addEventListener("click", function () {
+        //     var id = document.getElementById('getbyid-id').value
+        //     if (!id) return alert('Plese specify an id');
+        //     axios.get(`${getUrl()}/${id}`, config).then(result => {
+        //         setOutput(result.data)
+        //     }).catch(err => {
+        //         setOutput(err)
+        //     })
+        // });
         document.getElementById('get-all').addEventListener("click", function () {
 
             axios.get(`${getUrl()}`, config).then(result => {
@@ -334,6 +334,7 @@ function getUrl(){
                         <div class="col-6">
                             
                             <label>GET</label>
+                            <br>
                             <button type="button" id="get-all"  class="btn btn-primary">Load All</button>
                           
                             <hr>
